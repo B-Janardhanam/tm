@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>தமிழ்மன்றம் - குழு உறுப்பினர்கள்</title>
+  <link rel="stylesheet" href="kuzhu.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <img src="images/tmmit.jpeg" alt="Club Logo" width="100px" height= "50px" class="logo"> <!-- add your logo -->
+    <h1>தமிழ்மன்றம்</h1>
+    <p>அனைவரையும் இணைக்கும் தமிழின் மையம்</p>
+  </header>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" id="search" placeholder="இங்கே தேடுங்கள்..." onkeyup="searchMembers()">
+  </div>
+
+  <!-- Year Filter Buttons -->
+  <nav class="year-filter">
+    <button class="filter-btn active" onclick="filterMembers('all', event)">அனைத்து ஆண்டுகள்</button>
+    <button class="filter-btn" onclick="filterMembers('2026', event)">2026 ஆண்டு</button>
+    <button class="filter-btn" onclick="filterMembers('2027', event)">2027 ஆண்டு</button>
+    <button class="filter-btn" onclick="filterMembers('2028', event)">2028 ஆண்டு</button>
+  </nav>
+
+  <!-- Members Section -->
+  <main class="members-container">
+    <div class="member-card" data-year="2026" onclick="openModal(this)">
+      <h3>அருண் கிருஷ்ண ரா</h3>
+      <p class="roll">202250653</p>
+      <p class="dept">தகவல் தொழில்நுட்பம்</p>
+      <span class="role leader">தலைவர்</span>
+    </div>
+
+    <div class="member-card" data-year="2026" onclick="openModal(this)">
+      <h3>சுவேதா ஶ்ரீ சர</h3>
+      <p class="roll">202250627</p>
+      <p class="dept">தகவல் தொழில்நுட்பம்</p>
+      <span class="role deputy">துணைத் தலைவர்</span>
+    </div>
+
+    <div class="member-card" data-year="2027" onclick="openModal(this)">
+      <h3>அண்ணாமலை செ</h3>
+      <p class="roll">202350207</p>
+      <p class="dept">தானாயங்கிப் பொறியியல்</p>
+      <span class="role secretary">செயலாளர்</span>
+    </div>
+
+    <div class="member-card" data-year="2027" onclick="openModal(this)">
+      <h3>கார்த்திக் எஸ்</h3>
+      <p class="roll">2023501005</p>
+      <p class="dept">கணினி அறிவியல்</p>
+      <span class="role secretary">செயலாளர்</span>
+    </div>
+ <div class="member-card" data-year="2026" onclick="openModal(this)">
+      <h3>சுவேதா ஶ்ரீ சர</h3>
+      <p class="roll">202250627</p>
+      <p class="dept">தகவல் தொழில்நுட்பம்</p>
+      <span class="role deputy">துணைத் தலைவர்</span>
+    </div>
+
+     <div class="member-card" data-year="2026" onclick="openModal(this)">
+      <h3>சுவேதா ஶ்ரீ சர</h3>
+      <p class="roll">202250627</p>
+      <p class="dept">தகவல் தொழில்நுட்பம்</p>
+      <span class="role deputy">துணைத் தலைவர்</span>
+    </div>
+
+
+
+<div class="member-card" data-year="2028" onclick="openModal(this)">
+  <h3>அருண் கிஷோர் ரா</h3>
+  <p class="roll">2024506033</p>
+  <p class="dept">தகவல் தொழில்நுட்பம்</p>
+  <span class="role leader">தலைவர்</span>
+</div>
+
+<div class="member-card" data-year="2028" onclick="openModal(this)">
+  <h3>சுவேதா ஶ்ரீ சர</h3>
+  <p class="roll">2024506072</p>
+  <p class="dept">தகவல் தொழில்நுட்பம்</p>
+  <span class="role deputy">துணைத் தலைவர்</span>
+</div>
+
+<div class="member-card" data-year="2027" onclick="openModal(this)">
+  <h3>அண்ணாமலை செ</h3>
+  <p class="roll">2023502057</p>
+  <p class="dept">தானாயங்கிப் பொறியியல்</p>
+  <span class="role secretary">செயலாளர்</span>
+</div>
+
+<div class="member-card" data-year="2027" onclick="openModal(this)">
+  <h3>கார்த்திக் எஸ்</h3>
+  <p class="roll">2023501005</p>
+  <p class="dept">கணினி அறிவியல்</p>
+  <span class="role secretary">செயலாளர்</span>
+</div>
+
+<div class="member-card" data-year="2026" onclick="openModal(this)">
+  <h3>பிரியா கே</h3>
+  <p class="roll">2022502044</p>
+  <p class="dept">மின்னணு மற்றும் தொடர்பியல்</p>
+  <span class="role deputy">துணைச் செயலாளர்</span>
+</div>
+
+
+<div class="member-card" data-year="2028" onclick="openModal(this)">
+  <h3>கார்த்திக் எஸ்</h3>
+  <p class="roll">2024501035</p>
+  <p class="dept">கணினி அறிவியல்</p>
+  <span class="role secretary">செயலாளர்</span>
+</div>
+
+<div class="member-card" data-year="2027" onclick="openModal(this)">
+  <h3>பிரியா கே</h3>
+  <p class="roll">2023502044</p>
+  <p class="dept">மின்னணு மற்றும் தொடர்பியல்</p>
+  <span class="role deputy">துணைச் செயலாளர்</span>
+</div>
+
+<div class="member-card" data-year="2026" onclick="openModal(this)">
+  <h3>அருண் கிஷோர் ரா</h3>
+  <p class="roll">2022506053</p>
+  <p class="dept">தகவல் தொழில்நுட்பம்</p>
+  <span class="role leader">தலைவர்</span>
+</div>
+
+<div class="member-card" data-year="2028" onclick="openModal(this)">
+  <h3>சுவேதா ஶ்ரீ சர</h3>
+  <p class="roll">2024506037</p>
+  <p class="dept">தகவல் தொழில்நுட்பம்</p>
+  <span class="role deputy">துணைத் தலைவர்</span>
+</div>
+
+
+
+  </main>
+
+  <!-- Profile Modal -->
+  <div id="profileModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3 id="modalName"></h3>
+      <p id="modalRoll"></p>
+      <p id="modalDept"></p>
+      <p id="modalRole"></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 தமிழ்மன்றம் | அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டன</p>
+    <p>தொடர்பு: tamizhmankuzhu@example.com</p>
+    <div class="socials">
+      <a href="#">🌐</a>
+      <a href="#">📘</a>
+      <a href="#">📷</a>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    // Filter members by year
+    function filterMembers(year, event) {
+      const cards = document.querySelectorAll('.member-card');
+      cards.forEach(card => {
+        card.style.display = (year === 'all' || card.dataset.year === year) ? 'block' : 'none';
+      });
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+
+    // Search members
+    function searchMembers() {
+      let input = document.getElementById('search').value.toLowerCase();
+      let cards = document.querySelectorAll('.member-card');
+      cards.forEach(card => {
+        let text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? 'block' : 'none';
+          });
+
+       const noResults = document.getElementById('no-results');
+  if (!found) {
+    noResults.style.display = 'block';
+  } else {
+    noResults.style.display = 'none';
+  }
+    }
+
+    // Modal
+    function openModal(card) {
+      document.getElementById('modalName').innerText = card.querySelector('h3').innerText;
+      document.getElementById('modalRoll').innerText = card.querySelector('.roll').innerText;
+      document.getElementById('modalDept').innerText = card.querySelector('.dept').innerText;
+      document.getElementById('modalRole').innerText = card.querySelector('.role').innerText;
+      document.getElementById('profileModal').style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById('profileModal').style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
