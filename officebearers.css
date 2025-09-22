@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    font-family: "Latha", sans-serif;
+    background: linear-gradient(to right, #f8f8f8, #e0e0e0);
+    color: #2c1a1a;
+}
+
+/* Header with Batch Buttons */
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.batch-buttons {
+    margin-top: 10px;
+}
+
+.batch-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background: #b30000;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(179, 0, 0, 0.4);
+}
+
+.batch-buttons button:hover {
+    background: #ff4d4d;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(179, 0, 0, 0.6);
+}
+
+.batch-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #b30000;
+    margin-top: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Box for each member */
+.kuzhu-box {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 350px;
+    width: 260px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Gradient Overlay */
+.kuzhu-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1));
+    transition: background 0.4s ease;
+}
+
+/* Overlay for details */
+.kuzhu-name {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.3);
+    padding: 14px;
+    border-radius: 0 0 20px 20px;
+    line-height: 1.5em;
+    transition: background 0.4s ease, transform 0.4s ease;
+}
+
+/* Name, Role, Dept, Regno Styling */
+.kuzhu-name .name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #b30000;
+    letter-spacing: 0.5px;
+}
+
+.kuzhu-name .role {
+    font-size: 17px;
+    font-weight: bold;
+    color: #006400;
+    margin-top: 2px;
+}
+
+.kuzhu-name .dept {
+    font-size: 15px;
+    color: #00008B;
+    margin-top: 2px;
+}
+
+.kuzhu-name .regno {
+    font-size: 14px;
+    color: #8B0000;
+    margin-top: 2px;
+}
+
+/* Hover Effects */
+.kuzhu-box:hover {
+    transform: scale(1.08) rotate(-1deg);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.kuzhu-box:hover::before {
+    background: linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.05));
+}
+
+.kuzhu-box:hover .kuzhu-name {
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateY(-5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .batch-container {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .kuzhu-box { height: 300px; }
+    .kuzhu-name .name { font-size: 18px; }
+}
